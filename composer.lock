@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bd58fd976f1ee3e9611bc37c006ec46",
+    "content-hash": "66bad275f0e3e730350b8e7eb727a7cc",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -359,6 +359,44 @@
                 "tokenizer"
             ],
             "time": "2018-03-21T22:21:57+00:00"
+        },
+        {
+            "name": "laracademy/model-generator",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracademy/ModelGenerator.git",
+                "reference": "0ab1934e9700e454de4afecb9ffbc83fcdbe3bfb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracademy/ModelGenerator/zipball/0ab1934e9700e454de4afecb9ffbc83fcdbe3bfb",
+                "reference": "0ab1934e9700e454de4afecb9ffbc83fcdbe3bfb",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Laracademy\\ModelGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael McMullen",
+                    "email": "michael@laracademy.co"
+                }
+            ],
+            "description": "This package will generate a Laravel Model based on your database table itself, filling in the required fields automatically.",
+            "keywords": [
+                "generators",
+                "laravel"
+            ],
+            "abandoned": "laracademy/generators",
+            "time": "2016-05-24T17:24:50+00:00"
         },
         {
             "name": "laravel/framework",

@@ -145,6 +145,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Model generator service provider
+         */
+        Laracademy\ModelGenerator\ModelGeneratorServiceProvider::class
+
     ],
 
     /*
