@@ -1,5 +1,11 @@
 vendor/
 node_modules/
+storage/
+/build/logs
+/build/coverage
+/app/tests/_log
+/app/config/packages
+/public/packages
 npm-debug.log
 
 # Laravel 4 specific
@@ -8,7 +14,7 @@ app/storage/
 
 # Laravel 5 & Lumen specific
 public/*
-storage/*.key
+storage/*
 .env.*.php
 .env.php
 .env
@@ -17,5 +23,14 @@ Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
-.idea/
+/.idea
+/_ide_helper.php
+
+composer.phar
+.DS_Store
+
+
+
+
+
 
