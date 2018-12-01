@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePasswordResetsTable extends Migration
+class CreateRecurTransactionInfoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,12 @@ class CreatePasswordResetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
+        Schema::create('recur_transaction_info', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email')->index();
-            $table->string('token')->index();
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->enum('occur_at_every', ['monthly, weekly']);
+            $table->integer('recur_count');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +30,6 @@ class CreatePasswordResetsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('password_resets');
+        Schema::drop('recur_transaction_info');
     }
 }
