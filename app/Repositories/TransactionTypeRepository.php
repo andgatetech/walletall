@@ -8,13 +8,13 @@
 
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\TransactionType;
 
 class TransactionTypeRepository implements RepositoryInterface
 {
     protected $model;
 
-    public function __construct(Model $model)
+    public function __construct(TransactionType $model)
     {
         $this->model = $model;
     }

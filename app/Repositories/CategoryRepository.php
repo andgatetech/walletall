@@ -8,13 +8,13 @@
 
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Category;
 
 class CategoryRepository implements RepositoryInterface
 {
     protected $model;
 
-    public function __construct(Model $model)
+    public function __construct(Category $model)
     {
         $this->model = $model;
     }

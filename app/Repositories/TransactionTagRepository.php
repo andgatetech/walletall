@@ -8,13 +8,13 @@
 
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\TransactionsTag;
 
 class TransactionTagRepository implements RepositoryInterface
 {
     protected $model;
 
-    public function __construct(Model $model)
+    public function __construct(TransactionsTag $model)
     {
         $this->model = $model;
     }

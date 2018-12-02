@@ -8,13 +8,13 @@
 
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\PasswordReset;
 
 class PasswordResetRepository implements RepositoryInterface
 {
     protected $model;
 
-    public function __construct(Model $model)
+    public function __construct(PasswordReset $model)
     {
         $this->model = $model;
     }

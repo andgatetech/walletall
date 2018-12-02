@@ -8,13 +8,13 @@
 
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\RecurTransactionInfo;
 
-class RecurTransactionRepository implements RepositoryInterface
+class RecurTransactionInfoRepository implements RepositoryInterface
 {
     protected $model;
 
-    public function __construct(Model $model)
+    public function __construct(RecurTransactionInfo $model)
     {
         $this->model = $model;
     }
