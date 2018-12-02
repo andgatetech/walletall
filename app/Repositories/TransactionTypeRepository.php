@@ -8,32 +8,57 @@
 
 namespace App\Repositories;
 
+use Illuminate\Database\Eloquent\Model;
 
 class TransactionTypeRepository implements RepositoryInterface
 {
+    protected $model;
+
+    public function __construct(Model $model)
+    {
+        $this->model = $model;
+    }
+
+    // Get all instances of model
     public function all()
     {
-        // TODO: Implement all() method.
+        return $this->model->all();
     }
 
+    // create a new record in the database
     public function create(array $data)
     {
-        // TODO: Implement create() method.
+        return $this->model->create($data);
     }
 
+    // update record in the database
     public function update(array $data, $id)
     {
-        // TODO: Implement update() method.
+        $record = $this->find($id);
+        return $record->update($data);
     }
 
+    // remove record from the database
     public function delete($id)
     {
-        // TODO: Implement delete() method.
+        return $this->model->destroy($id);
     }
 
+    // show the record with the given id
     public function show($id)
     {
-        // TODO: Implement show() method.
+        return $this->model->findOrFail($id);
+    }
+
+    // Set the associated model
+    public function  setModel($model){
+        $this->model = $model;
+        return $this;
+    }
+
+    // Eager load database relationships
+    public function with($relations){
+        return $this->model->with($relations);
     }
 
 }
