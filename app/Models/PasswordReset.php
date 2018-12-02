@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Transactions_tag extends Model  {
+class PasswordReset extends Model  {
     use SoftDeletes;
 
     /**
@@ -13,14 +13,14 @@ class Transactions_tag extends Model  {
      *
      * @var string
      */
-    protected $table = 'transactions_tags';
+    protected $table = 'password_resets';
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['transaction_id', 'tag_id', 'deleted_at'];
+    protected $fillable = ['email', 'token', 'deleted_at'];
 
     /**
      * The attributes excluded from the model's JSON form.

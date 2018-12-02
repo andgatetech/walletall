@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Password_reset extends Model  {
+class AccountType extends Model  {
     use SoftDeletes;
 
     /**
@@ -13,14 +13,14 @@ class Password_reset extends Model  {
      *
      * @var string
      */
-    protected $table = 'password_resets';
+    protected $table = 'account_types';
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['email', 'token', 'deleted_at'];
+    protected $fillable = ['name', 'status', 'deleted_at'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -34,7 +34,7 @@ class Password_reset extends Model  {
      *
      * @var array
      */
-    protected $casts = [];
+    protected $casts = ['status' => 'boolean'];
 
     /**
      * The attributes that should be mutated to dates.

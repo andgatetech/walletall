@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Recur_transaction_info extends Model  {
+class RecurTransactionInfo extends Model  {
     use SoftDeletes;
 
     /**

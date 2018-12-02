@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Account_type extends Model  {
+class TransactionsTag extends Model  {
     use SoftDeletes;
 
     /**
@@ -13,14 +13,14 @@ class Account_type extends Model  {
      *
      * @var string
      */
-    protected $table = 'account_types';
+    protected $table = 'transactions_tags';
 
     /**
      * Attributes that should be mass-assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'status', 'deleted_at'];
+    protected $fillable = ['transaction_id', 'tag_id', 'deleted_at'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -34,7 +34,7 @@ class Account_type extends Model  {
      *
      * @var array
      */
-    protected $casts = ['status' => 'boolean'];
+    protected $casts = [];
 
     /**
      * The attributes that should be mutated to dates.
