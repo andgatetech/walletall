@@ -11,13 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/test/index','TestController@index');
-Route::get('/test/create','TestController@create');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('add-profile', 'ProfileController@addProfile');
+Route::get('get-profile/{$id}', 'ProfileController@getProfile');
